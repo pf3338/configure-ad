@@ -129,6 +129,46 @@ Log out of DC-1 and restart the VM from the Azure portal. Log back in as "mydoma
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+Head to the Azure portal and set Client-1’s DNS to be DC-1’s Private IP address. Restart Client-1 after.
+</p>
+<br />
 
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Log into Client-1 with your original credentials, and join it to the domain you setup earlier. This will prompt your virtual machine to restart.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Login to DC-1 and make sure Client-1 appears under Active Directory Users and Computers (ADUC). You should be able to find it by navigating to the "Computers" container on the root of the domain.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Head back to Client-1 and login as "mydomain.com\john_admin".
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Open system properties, click on "Remote Desktop" and give domain users access to remote desktop.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Finally, restart Client-1 from azure, and log back in with a non-administrative user account. Active Directory should be fully operational and ready for the creation of new user accounts and resources.
 </p>
 <br />
